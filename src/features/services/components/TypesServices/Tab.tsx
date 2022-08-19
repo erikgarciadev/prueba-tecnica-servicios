@@ -4,11 +4,18 @@ import styles from "./TypesServices.module.css";
 export default function Tab({
   children,
   active = false,
+  onClick = () => {},
 }: {
   children: ReactNode;
   active?: boolean;
+  onClick?: () => void;
 }) {
   return (
-    <div className={`${styles.tab} ${active && styles.active}`}>{children}</div>
+    <div
+      onClick={onClick}
+      className={`${styles.tab} ${active && styles.active}`}
+    >
+      {children}
+    </div>
   );
 }

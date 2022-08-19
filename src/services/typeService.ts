@@ -1,15 +1,16 @@
 import { typesService } from "../config/constants";
+import { ITypeService } from "../interfaces/typeService.interface";
 import { getData } from "../utils/getData";
 
 class TypeService {
-    typesService: any[] = []
-    constructor(){
-        this.typesService = typesService
-    }
+  typesService: ITypeService[] = [];
+  constructor() {
+    this.typesService = typesService;
+  }
 
-    async get(){
-        return await  getData(this.typesService)
-    }
+  async get() {
+    return await getData<ITypeService[]>(this.typesService, 1000);
+  }
 }
 
-export default new TypeService()
+export default new TypeService();

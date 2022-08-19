@@ -10,6 +10,9 @@
 .wrapper__card {
     border-radius: 20px;
     border: 2px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card__top {
@@ -29,6 +32,12 @@
     flex-direction: column;
     gap: 0.5em;
     margin-top: 1em;
+}
+
+.form__label label:last-child {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .wrapper__list__services {

@@ -1,6 +1,6 @@
 export interface IService {
-  id: string | number;
+  id: string | number | null;
   name: string;
-  descripcion: string;
+  description: string;
   idTypeService: number;
 }

@@ -5,12 +5,14 @@ export default function Input({
   placeholder = "",
   onChange,
   value,
-  autoFocus = false
+  autoFocus = false,
+  name=''
 }: {
   value?: string | number | readonly string[] | undefined;
   placeholder?: string;
   onChange?: (ev: ChangeEvent<HTMLInputElement>) => void;
   autoFocus?: boolean
+  name: string
 }) {
-  return <input autoFocus={autoFocus} className={styles.input} onChange={onChange} value={value} />;
+  return <input name={name} autoFocus={autoFocus} className={styles.input} onChange={onChange} value={value} />;
 }

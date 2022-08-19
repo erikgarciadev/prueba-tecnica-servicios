@@ -1,22 +1,31 @@
 import React from "react";
+import { useAppDispatch } from "../../../app/hooks";
 import Button from "../../../components/Button";
+import { IService } from "../../../interfaces/service.interface";
 import styles from "../Services.module.css";
+import { deleteService, setSelectedService } from "../servicesSlice";
 
-export default function CardService() {
+export default function CardService({ service }: { service: IService }) {
+  const dispatch = useAppDispatch();
+  const handleDelete = (idService: number | string) => {
+    dispatch(deleteService(idService));
+  };
+  const handleEdit = (idService: number | string) => {
+    dispatch(setSelectedService(idService));
+  };
   return (
     <div className={styles.wrapper__card}>
       <div className={styles.card__top}>
-        <h2>Electricidad</h2>
-        <p>
-          Lorem ipsum dadad da Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit. Eaque nihil reiciendis quas expedita in perferendis
-          reprehenderit ea repellendus, quam adipisci ullam fugiat nam incidunt
-          consequuntur omnis, totam itaque aliquid impedit.
-        </p>
+        <h2>{service.name}</h2>
+        <p>{service.description}</p>
       </div>
       <div className={styles.card__bottom}>
-        <Button outline={false}>Editar</Button>
-        <Button outline={false}>Eliminar</Button>
+        <Button outline={false} onClick={() => handleEdit(service.id!)}>
+          Editar
+        </Button>
+        <Button outline={false} onClick={() => handleDelete(service.id!)}>
+          Eliminar
+        </Button>
       </div>
     </div>
   );
