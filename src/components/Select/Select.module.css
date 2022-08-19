@@ -1,0 +1,15 @@
+.select {
+    padding: 1em;
+    border-radius: 5px;
+    border: 2px solid var(--border);
+    cursor: pointer;
+}
+
+.select:focus {
+    outline: 2px solid var(--border);
+}
+
+.select option {
+    font-size: 16px;
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.button {
+    padding: 0.8em;
+    background: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 50px;
+}
+
+.button.outline {
+    border: 2px solid;
+}
+
+.button.green {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.button.red {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.button.blue{
+    color: var(--blue);
+}

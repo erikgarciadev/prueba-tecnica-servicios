@@ -1,5 +1,15 @@
+:root {
+  --gray: #F8F9FA;
+  --border:#EFEFEF ;
+  --green: #86CD97;
+  --red: #EDADB4 ;
+  --blue: #5EACFC ;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +20,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  /* padding: 0 1em; */
 }
